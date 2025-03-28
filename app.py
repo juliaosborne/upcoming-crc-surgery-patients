@@ -147,7 +147,9 @@ Return a JSON array. Example:
 Only assign "Dr. Vasilevsky" if the original text clearly includes a name like "Dr V", "CAV", "Dr. V.", or "Vasilevsky". Do not change any other surgeon names.
 If a month is duplicated (e.g., "Jan jan 21"), output it as "Jan 21".
 If you sense a typo in a surgeons name (e.g., "Motin"), interpret it as "Morin" so you can output it as "Dr. Morin".
-If the user inputs irrelevant text, such as email introductions like "Hi Julia, here are the upcoming surgeries", ignore this and only look for the relevant data. 
+If the user inputs irrelevant text, such as email introductions like "Hi Julia, here are the upcoming surgeries", ignore this and only look for the relevant data.
+If you detect a phone number with an accidentally placed letter, ignore the letter and retain the phone number.
+
 
 TEXT:
 {formatted}
